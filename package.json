@@ -6,6 +6,11 @@
   "bugs": {
     "url": "https://github.com/bahrus/font-face-feature/issues"
   },
+  "exports": {
+    ".": "./FontFaceFeature.js",
+    "./FontFaceFeature": "./FontFaceFeature.js",
+    "./types": "./types/font-face-feature/types.d.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/font-face-feature.git"
