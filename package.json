@@ -8,7 +8,7 @@
   },
   "exports": {
     ".": "./FontFaceFeature.js",
-    "./FontFaceFeature": "./FontFaceFeature.js",
+    "./FontFaceFeature.js": "./FontFaceFeature.js",
     "./types": "./types/font-face-feature/types.d.ts"
   },
   "repository": {
