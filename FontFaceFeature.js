@@ -1,7 +1,7 @@
 //@ts-check
 /** @import { FontFaceFeatureConfig } from './types/font-face-feature/types.d.ts'; */
 
-class FontFaceFeature {
+export class FontFaceFeature {
 
     /**
      * Called once by `assignFeatures` after registration.
