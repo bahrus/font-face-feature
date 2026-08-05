@@ -21,9 +21,9 @@ export class FontFaceFeature {
         featureConfig
     ){
         const { customData, withAttrs } = featureConfig;
-        const { fontFamily } = customData;
-        const fontFamilies = Array.isArray(fontFamily) ? fontFamily : [fontFamily];
-        for(const fontConfig of fontFamilies){
+        const { fontFamilies } = customData;
+        const fontFamiliesList = Array.isArray(fontFamilies) ? fontFamilies : [fontFamilies];
+        for(const fontConfig of fontFamiliesList){
             const { name, url, descriptors } = fontConfig;
             const fontFace = new FontFace(name, `url(${url})`, descriptors);
             await fontFace.load();
