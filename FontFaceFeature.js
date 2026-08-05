@@ -14,14 +14,15 @@ export class FontFaceFeature {
     /**
      * 
      * @param {{ new(...args: any[]): any; prototype: any; observedAttributes?: string[] }} ctr 
-     * @param {{customData: FontFaceFeatureConfig; withAttrs?: Record<string, any>; [key: string]: any}} featureConfig 
+     * @param {{customData: {fontFaceFeatureConfig: FontFaceFeatureConfig;}; withAttrs?: Record<string, any>; [key: string]: any}} featureConfig 
      */
     static async onAssigned(
         ctr,
         featureConfig
     ){
         const { customData, withAttrs } = featureConfig;
-        const { fontFamilies } = customData;
+        const { fontFaceFeatureConfig } = customData;
+        const { fontFamilies } = fontFaceFeatureConfig;
         const fontFamiliesList = Array.isArray(fontFamilies) ? fontFamilies : [fontFamilies];
         for(const fontConfig of fontFamiliesList){
             const { name, url, descriptors } = fontConfig;
